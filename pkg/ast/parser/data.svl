@@ -1,0 +1,14 @@
+import "data.svl"
+
+define {
+    "名称": "XXX漏洞扫描
+}
+
+payload = base64 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+
+if $target=="127.0.0.1" && $port == 80 {
+    return success();
+}
+
+display("hello");
